@@ -8,10 +8,10 @@ import { addToCart } from '../actions/cartActions'
 const CartScreen = () => {
   const param = useParams()
   const productId = param.id
-  const location = useLocation
-  const navigate = useNavigate
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  const qty = location.search ? Number(location.search.split('=')[1]) : 3
+  const qty = location.search ? Number(location.search.split('=')[1]) : 1
   console.log(qty)
   const dispatch = useDispatch()
 
